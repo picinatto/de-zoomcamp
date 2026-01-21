@@ -2,6 +2,9 @@
 *.csv.gz
 *.csv
 ny_taxi_postgres_data/
+gcp-key.json
+
+.terraform
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
