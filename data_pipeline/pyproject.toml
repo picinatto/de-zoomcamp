@@ -3,14 +3,11 @@ name = "data-pipeline"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
+    "dbt-bigquery",
     "dbt-duckdb>=1.10.0",
     "duckdb>=1.4.4",
-    "google>=3.0.0",
-    "google-cloud>=0.34.0",
-    "google-cloud-bigquery>=3.40.0",
-    "google-cloud-storage>=3.9.0",
     "pandas>=3.0.0",
     "psycopg2-binary>=2.9.11",
     "pyarrow>=23.0.0",

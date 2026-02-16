@@ -1,4 +1,27 @@
-
+# dbt
 target/
 dbt_packages/
+dbt_internal_packages/
 logs/
+*.log
+
+# Credentials & local config (never commit)
+profiles.yml
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Python (if using dbt in a venv here)
+__pycache__/
+.venv/
+venv/
+*.pyc
+*.pyo

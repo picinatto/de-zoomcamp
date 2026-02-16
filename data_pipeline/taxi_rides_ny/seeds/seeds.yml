@@ -1,0 +1,22 @@
+version: 2
+
+seeds:
+  - name: payment_type_lookup
+    description: Payment type lookup table
+    columns:
+      - name: payment_type
+        data_type: integer
+      - name: description
+        data_type: string
+
+  - name: taxi_zone_lookup
+    description: Taxi zone geographic lookup table
+    columns:
+      - name: locationid
+        data_type: integer
+      - name: borough
+        data_type: string
+      - name: zone
+        data_type: string
+      - name: service_zone
+        data_type: string

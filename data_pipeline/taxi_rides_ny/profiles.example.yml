@@ -1,0 +1,24 @@
+# Copie para ~/.dbt/profiles.yml e preencha com seus valores.
+# IMPORTANTE: Defina "location" igual à região do seu dataset no BigQuery.
+# (Console BigQuery → clique no dataset "zoomcamp" → aba Detalhes → "Localização")
+#
+# Exemplos de location: US, EU, us-central1, southamerica-east1, etc.
+
+taxi_rides_ny:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: oauth  # ou service-account
+      project: de-zoomcamp-397401
+      dataset: zoomcamp
+      # Ajuste para a região onde o dataset "zoomcamp" foi criado:
+      location: US   # use EU, us-central1, etc. se o dataset estiver em outra região
+      threads: 1
+    dev:
+      type: bigquery
+      method: oauth
+      project: de-zoomcamp-397401
+      dataset: zoomcamp
+      location: US
+      threads: 1
