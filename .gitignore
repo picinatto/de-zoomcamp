@@ -176,3 +176,4 @@ cython_debug/
 .bruin.yml
 logs/runs
 logs/*.log
+logs/queries

@@ -678,6 +678,17 @@ Bruin Cloud provides managed infrastructure to schedule and run your pipelines a
 
 ## Best Practices & Tips
 
+### DuckDB seed: harmless dlt warnings
+
+When you run `ingestion.payment_lookup` (seed asset), you may see:
+
+```text
+When initializing destination factory of type dlt.destinations.duckdb, argument dest_table is not a valid field...
+When initializing destination factory of type dlt.destinations.duckdb, argument staging_bucket is not a valid field...
+```
+
+Bruin passes destination options (`dest_table`, `staging_bucket`) that apply to cloud backends; the DuckDB destination ignores them and dlt logs these warnings. **You can ignore them** — the seed still loads correctly.
+
 ### Materialization Strategies: When to Use What
 
 Bruin supports several materialization strategies. Choose based on your data characteristics:

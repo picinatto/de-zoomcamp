@@ -4,6 +4,9 @@
 #
 # Seed assets let you load CSV files directly into your data platform.
 # This is useful for small, static reference/lookup data.
+#
+# Note: When using DuckDB, Bruin may log dlt warnings about dest_table/staging_bucket
+# not being valid for DuckDbClientConfiguration. Those are harmless; the seed runs correctly.
 
 name: ingestion.payment_lookup
 
